@@ -1,14 +1,21 @@
 export class Flag{
     #name;
+    #region;
     #flagURL;
     #card;
 
-    constructor(name, flagURL){
+    constructor(name, flagURL, region){
         this.#name = name;
         this.#flagURL = flagURL;
+        this.#region = region;
         this.#card = document.createElement('div');
     }
-
+    getRegion(){
+        return this.#region;
+    }
+    getName(){
+        return this.#name;
+    }
     render(wrapper){
         const img = document.createElement('img');
         const form = document.createElement('form');
@@ -26,6 +33,10 @@ export class Flag{
         this.#card.append(img, form);
         wrapper.append(this.#card);
     };
+
+    reRender(wrapper){
+        wrapper.append(this.#card);
+    }
 
     #handleGuess(event){
         event.preventDefault();
