@@ -62,6 +62,6 @@ getCountries()
     .then( countries =>{
         // const filtered = filter('startOfWeek')('sunday')(countries);
         // const filtered = filterbyRegion('europe')(countries)
-        const filtered = filterbyAfrica(countries)
-        render(filtered)
-    })
+        const filtered = filterbyAfrica(countries);
+        render(filtered);
+    });

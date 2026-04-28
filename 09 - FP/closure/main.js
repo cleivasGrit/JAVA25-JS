@@ -9,19 +9,16 @@ const smallBtn = document.querySelector('#small');
 // });
 
 
-const changeSize = size =>{
+const changeSize = size => {
     return ()=>{
         const h1 = document.querySelector('h1');
         h1.style.fontSize = size;
     }
 };
+
 bigBtn.addEventListener('click', changeSize('4rem'));
 mediumBtn.addEventListener('click', changeSize('2rem'));
 smallBtn.addEventListener('click', changeSize('.5rem'));
-
-
-
-
 
 
 const createCounter = (container) => {
@@ -34,7 +31,7 @@ const createCounter = (container) => {
     btn.addEventListener('click', ()=>{
         count++;
         btn.innerText = count;
-    })
+    });
 };
 
 createCounter(document.body);
